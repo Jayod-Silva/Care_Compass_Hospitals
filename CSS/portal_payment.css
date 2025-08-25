@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+:root {
+    --bg-color: #f3f8f3;
+    --secondary-color: #5cc77a;
+    --text-color: #273238;
+    --text-color-light: #686868;
+    --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    --box-shadow-2: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    height: 155vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: auto;
+    background-color: var(--text-color);
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar .logout{
+  margin-top: 35%;
+  margin-left: 5%;
+  padding: 10px;
+  background: #424a4e;
+  border-radius: 10px 0 0 10px;
+}
+
+.sidebar .logout:hover{
+  background: #353f45;
+}
+
+.sidebar a:hover {
+    background: rgb(183, 236, 198);
+}
+
+.sidebar .active {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* --------------------------------------------Content Area */
+.content {
+    flex: 1;
+    padding: 20px 30px;
+    margin-top: 0;
+    background-image: url('http://localhost/Care Compass Hospital/IMG/about-bg.png');
+    background-repeat: no-repeat;
+}
+
+.content h1 {
+    color: white;
+    padding: 5px;
+    background: #273238;
+    filter: opacity(80%);
+    text-align: center;
+    font-size: 25px;
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+.content h2 {
+    margin-top: 2%;
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+.payment-form-container {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .payment-form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-2);
+    max-width: 400px;
+    width: 100%;
+    animation: zoomIn 1.2s ease-in-out;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .payment-form .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .inputBox {
+    margin-bottom: 10px;
+  }
+  
+  .inputBox span {
+    display: block;
+    font-size: 13px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+  
+  .inputBox input,
+  select {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .inputBox img {
+    width: 100%;
+    max-width: 100px;
+  }
+  
+  .flex {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .flex .inputBox {
+    flex: 1;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(0.98);
+    background: var(--text-color);
+    color: #fff;
+  }
+  
+  .payment-img {
+    margin-left: 50px;
+    animation: zoomIn 1.2s ease-in-out;
+  }
+  
+  .payment-img img {
+    width: 100%;
+    max-width: 450px;
+  }

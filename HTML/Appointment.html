@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../IMG/Browser-logo.png">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="../CSS/make_appointment.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" />
+    <script src="../JS/appointment.js" defer></script>
+  </head>
+
+  <body>
+    <!--navigation_bar-->
+    <header>
+      <img src="../IMG/logo.png" id="logo">
+      <!--nav_links-->
+      <ul class="navbar">
+        <li><a href="../HTML/Homepage.html">Home</a></li>
+        <li><a href="../HTML/Homepage.html">About Us</a></li>
+        <li><a href="#services">Services<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../HTML/Emergency.html">Emergency care</a></li>
+            <li class="dropdown-items"><a href="../HTML/Surgery.html">Surgery information</a></li>
+            <li class="dropdown-items"><a href="../HTML/Laboratory.html">Laboratory</a></li>
+            <li class="dropdown-items"><a href="../HTML/Health_checks.html">Health checks</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="#">Appointment<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../Backend/login&regi.php">Doctor Appointment</a></li>
+            <li class="dropdown-items"><a href="../HTML/Payment.html">Online Payment</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../HTML/Doctors.html">Doctors</a></li>
+
+        <li><a href="../HTML/Contact.html">Contact Us</a></li>
+      </ul>
+
+      <!--login-button-->
+      <a href="../Backend/login&regi.php"><button class="login-btn">Login</button></a>
+
+
+    <!--Appointmet form-->
+    <div class="appointment-form">
+      <h1>Appointment</h1>
+      <form id="channeling-form" action="../Backend/make_appointment.php" method="POST">
+
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <input type="text" id="phone" name="phone" placeholder="Contact" required>
+
+        <select id="branch" name="hospital" required><!-------Hospital selector-->
+          <option value="" disabled selected>Select a Hospital</option>
+          <option value="Kandy">Kandy</option>
+          <option value="Colombo">Colombo</option>
+          <option value="Kurunegala">Kurunegala</option>
+        </select>
+
+        <select id="department" name="department" required><!-------Department selector-->
+          <option value="" disabled selected>Select a Department</option>
+          <option value="Cardiology">Cardiology</option>
+          <option value="Neurology">Neurology</option>
+          <option value="Orthopedics">Orthopedics</option>
+          <option value="Pulmonology">Pulmonology</option>
+          <option value="Dermatology">Dermatology</option>
+        </select>
+
+        <select id="doctor" name="doctor" required><!-------Doctor selector-->
+          <option value="" disabled selected> Cardiology</option>
+          <option value="Dr.Ashoka Silva">Dr.Ashoka Silva</option>
+          <option value="Dr.Kamal Prasadh">Dr.Kamal Prasadh</option>
+          <option value="Dr.Robert Brown">Dr.Robert Brown</option>
+          <option value="Dr.Olivia Scot">Dr.Olivia Scott</option>
+
+          <!--neuro-->
+          <option value="" disabled selected> Neurology</option>
+          <option value="Dr.Richard Harris">Dr.Richard Harris</option>
+          <option value="Dr.Anna Robert">Dr.Anna Roberts</option>
+          <option value="Dr.Ruwantha Bandara">Dr.Ruwantha Bandara</option>
+
+          <!--Orthopedics-->
+          <option value="" disabled selected> Orthopedics</option>
+          <option value="Dr.Rachel Moore">Dr.Rachel Moore</option>
+          <option value="Dr.Thomas Miller">Dr. Thomas Miller</option>
+
+          <!--pulmno-->
+          <option value="" disabled selected> Pulmonology</option>
+          <option value="Dr.William Taylor">Dr.William Taylor</option>
+          <option value="Dr.James Anderson">Dr.James Anderson</option>
+          <option value="Dr.Anna Roberts">Dr.Anna Roberts</option>
+
+          <!--Dermo-->
+          <option value="" disabled selected> Dermatology</option>
+          <option value="Dr.Daniel White">Dr.Daniel White</option>
+          <option value="Dr.Isabel Adams">Dr.Isabel Adams</option>
+          <option value="" disabled selected> Select a Doctor</option>
+        </select>
+
+        <input type="date" id="appointment_date" name="appointment_date" placeholder="Date" required>
+        <input type="time" id="appointment_time" name="appointment_time" placeholder="time" required>
+        <button id="submit" type="submit">Book Appointment</button>
+
+      </form>
+    </div>
+
+    <div class="image-list">
+      <img src="../IMG/Surgery.JPG" alt="Image 1"></a>
+      <img src="../IMG/lab.JPG" alt="Image 2"></a>
+      <img src="../IMG/Ambulance.JPG" alt="Image 3"></a>
+    </div>
+
+
+    <div class="appointment-heading">
+      <div class="head-txt">
+        <h2>Doctor Appointment</h2>
+
+        <p>At Care Compass Hospital, booking a doctor appointment<br>
+          is simple and convenient. Our team of experienced professionals<br>
+          is ready to provide exceptional care for your health needs. Schedule today!</p>
+      </div>
+
+      <img src="../IMG/appoint-main-imag.JPG" >
+    </div>
+
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="../IMG/logo.png">
+          </div>
+
+          <p>
+            Providing exceptional medical care with advanced technology and a dedicated team.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../HTML/Homepage.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="../HTML/Appointment.html">Appointment</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Location : Colombo, Sri Lanka</p>
+          <p>Phone : (+94) 076 186 9668</p>
+          <p>Email : info@carecompass.lk</p>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Care Compass Hospital. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

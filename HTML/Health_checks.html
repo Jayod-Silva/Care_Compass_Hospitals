@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="x-icon" href="../IMG/Browser-logo.png" />
+  <title>Health cheacks</title>
+  <link rel="stylesheet" href="../CSS/health_checks.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" />
+  <script src="../JS/health_checks.js" defer></script>
+</head>
+
+<body>
+  <!--navigation_bar-->
+  <header>
+    <img src="../IMG/logo.png" id="logo" />
+    <!--nav_links-->
+    <ul class="navbar">
+      <li><a href="../HTML/Homepage.html">Home</a></li>
+      <li><a href="../HTML//Homepage.html">About Us</a></li>
+
+      <li><a href="#services">Services<i class='bx bxs-chevron-down'></i></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-items"><a href="../HTML/Emergency.html">Emergency care</a></li>
+          <li class="dropdown-items"><a href="../HTML/Surgery.html">Surgery information</a></li>
+          <li class="dropdown-items"><a href="../HTML/Laboratory.html">Laboratory</a></li>
+          <li class="dropdown-items"><a href="../HTML/Health_checks.html">Health checks</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Appointment<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../Backend/login&regi.php">Doctor Appointment</a></li>
+            <li class="dropdown-items"><a href="../HTML/Payment.html">Online Payment</a></li>
+          </ul>
+        </li>
+
+      <li><a href="../HTML/Doctors.html">Doctors</a></li>
+      <li><a href="../HTML/Contact.html">Contact Us</a></li>
+    </ul>
+
+    <!--------------------------login-button-->
+    <a href="../Backend/login&regi.php"><button class="login-btn">Login</button></a>
+    
+  </header>
+
+ 
+
+  <!---------------------------- means Health cheacks-->
+
+  <div class="package-select">
+    <button id="men-tab" class="tab" onclick="showHealthChecks('men')">
+      Men
+    </button>
+    <button id="women-tab" class="tab inactive" onclick="showHealthChecks('women')">
+      Women
+    </button>
+  </div>
+
+  <div class="container">
+    <div id="men-health-checks">
+      <h2>Men's Health Checks</h2>
+      <div class="health-checks">
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Standard Over 40 Men</h3>
+          <p>Price: 32000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Classic Under 40 Men</h3>
+          <p>Price: 25000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Premier Under 40 Men</h3>
+          <p>Price: 38000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Premier Under 40 Men</h3>
+          <p>Price: 38000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------------------Women health checks-->
+
+    <div id="women-health-checks" class="hidden">
+      <h2>Women's Health Checks</h2>
+      <div class="health-checks">
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Basic Under 40 Women</h3>
+          <p>Price: 28000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Advanced Over 40 Women</h3>
+          <p>Price: 45000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+
+        <div class="card">
+          <img src="../IMG/health_cheacks.png" alt="img" loading="lazy" />
+          <h3>Advanced Over 40 Women</h3>
+          <p>Price: 45000/=</p>
+          <a href="../HTML/Payment.html">Get Package</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------footer-->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="../IMG/logo.png">
+        </div>
+
+        <p>
+          Providing exceptional medical care with advanced technology and a dedicated team.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../HTML/Homepage.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="../HTML/Appointment.html">Appointment</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Location : Colombo, Sri Lanka</p>
+        <p>Phone : (+94) 076 186 9668</p>
+        <p>Email : info@carecompass.lk</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Care Compass Hospital. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

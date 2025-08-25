@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="../IMG/Browser-logo.png">
+    <title>Online payment</title>
+    <link rel="stylesheet" href="../CSS/payment.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" />
+    <script src="../JS/payment.js" defer></script>
+  </head>
+
+  <body>
+    <!----------------navigation_bar-->
+    <header>
+      <img src="../IMG/logo.png" alt="care-logo" id="logo"></a>
+      <!-------------------------nav_links-->
+      <ul class="navbar">
+        <li><a href="../HTML/Homepage.html">Home</a></li>
+        <li><a href="../HTML/Homepage.html">About Us</a></li>
+
+        <li><a href="#services">Services<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../HTML/Emergency.html">Emergency care</a></li>
+            <li class="dropdown-items"><a href="../HTML/Surgery.html">Surgery information</a></li>
+            <li class="dropdown-items"><a href="../HTML/Laboratory.html">Laboratory</a></li>
+            <li class="dropdown-items"><a href="../HTML/Health_checks.html">Health checks</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="#">Appointment<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../Backend/login&regi.php">Doctor Appointment</a></li>
+            <li class="dropdown-items"><a href="#">Online Payment</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../HTML/Doctors.html">Doctors</a></li>
+        <li><a href="../HTML/Contact.html">Contact Us</a></li>
+      </ul>
+
+      <!--------------------------------login-button-->
+      <a href="../Backend/login&regi.php"><button class="login-btn">Login</button></a>
+
+    </header>
+
+    <!--------------------------------online payment-->
+
+    <div class="payment-form-container">
+
+      <form class="payment-form" action="../Backend/payment.php" method="POST">
+
+        <h3 class="title">Patient Info</h3>
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>Appointment ID</span>
+            <input id="appointment_id" name="appointment_id" type="number" placeholder="No" required>
+          </div>
+
+          <div class="inputBox">
+            <span>Amount</span>
+            <input id="amount" name="amount" type="number" placeholder="Amount" required>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>Department</span>
+            <select id="department" name="department" required>
+              <option value="" disabled selected>Department</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+              <option value="Pulmonology">Pulmonology</option>
+              <option value="Dermatology">Dermatology</option>
+            </select>
+          </div>
+
+          <div class="inputBox">
+            <span>Contact</span>
+            <input id="contact" name="contact" type="text" placeholder="Contact" required>
+          </div>
+        </div>
+
+        <div class="inputBox">
+          <span>Patient Name</span>
+          <input id="patient_name" name="patient_name" type="text" placeholder="Name" required>
+        </div>
+
+        <div class="inputBox">
+          <span>Email</span>
+          <input id="email" name="email" type="text" placeholder="example@gmail.com" required>
+        </div>
+
+        <h3 class="title">payment</h3>
+
+        <div class="inputBox">
+          <span>cards accepted </span>
+          <img src="../IMG/card_img.png" alt="">
+        </div>
+
+        <div class="inputBox">
+          <span>name on card </span>
+          <input id="card_name" name="card_name" type="text" placeholder="Enter name on card" required>
+        </div>
+
+        <div class="inputBox">
+          <span>credit card number </span>
+          <input id="card_number" name="card_number" type="number" placeholder="0000-0000-0000-0000" maxlength="16"
+            required>
+        </div>
+
+        <div class="inputBox">
+          <span>exp month </span>
+          <select name="month" id="month" placeholder="month">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+        </div>
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>exp year </span>
+            <input id="exp_year" name="exp_year" type="" placeholder="Year" required>
+          </div>
+          
+          <div class="inputBox">
+            <span>CVV </span>
+            <input id="cvv" name="cvv" type="text" placeholder="Enter CVV" maxlength="4" required>
+          </div>
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+      </form>
+
+      <div class="payment-img">
+        <img src="../IMG/Payment Information-cuate.png" alt="online-doc">
+      </div>
+
+    </div>
+
+
+   <!-------------------------------------footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="../IMG/logo.png">
+          </div>
+
+          <p>
+            Providing exceptional medical care with advanced technology and a dedicated team.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../HTML/Homepage.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="../HTML/Appointment.html">Appointment</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Location : Colombo, Sri Lanka</p>
+          <p>Phone : (+94) 076 186 9668</p>
+          <p>Email : info@carecompass.lk</p>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Care Compass Hospital. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

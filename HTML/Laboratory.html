@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="x-icon" href="../IMG/Browser-logo.png" />
+  <title>Laboratories</title>
+  <link rel="stylesheet" href="../CSS/laboratory.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" />
+  <script src="../JS/lab-appointment.js" defer></script>
+</head>
+
+<body>
+  <!-------------navigation_bar-->
+  <header>
+    <img src="../IMG/logo.png" alt="care-logo" id="logo" />
+    <!---------------nav_links-->
+    <ul class="navbar">
+      <li><a href="../HTML/Homepage.html">Home</a></li>
+      <li><a href="../HTML/Homepage.html">About Us</a></li>
+      
+        <li><a href="#">Services<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../HTML/Emergency.html">Emergency care</a></li>
+            <li class="dropdown-items"><a href="../HTML/Surgery.html">Surgery information</a></li>
+            <li class="dropdown-items"><a href="../HTML/Laboratory.html">Laboratory</a></li>
+            <li class="dropdown-items"><a href="../HTML/Health_checks.html">Health checks</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Appointment<i class='bx bxs-chevron-down'></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-items"><a href="../Backend/login&regi.php">Doctor Appointment</a></li>
+            <li class="dropdown-items"><a href="../HTML/Payment.html">Online Payment</a></li>
+          </ul>
+        </li>
+
+      <li><a href="../HTML/Doctors.html">Doctors</a></li>
+      <li><a href="../HTML/Contact.html">Contact Us</a></li>
+    </ul>
+
+    <!--------------------------login-button-->
+    <a href="../Backend/login&regi.php"><button class="login-btn">Login</button></a>
+
+  </header>
+
+  
+  <!--------------------------------- Laboratory Section -->
+  <div class="lab-heading">
+    <div class="lab-heading-content">
+      <h1>Laboratory</h1>
+      <p>
+        Care Compass Hospitals is dedicated to excellence in healthcare and
+        patient-focused care.<br />
+        Using advanced technology and precise diagnostics, we ensure reliable
+        medical testing.<br />
+        With expert consultation and a skilled team, we provide comprehensive,
+        high-quality healthcare services, <br />setting new standards in
+        medical excellence across Sri Lanka.
+      </p>
+    </div>
+    <img src="../IMG/lab-main.JPG" alt="lab" loading="lazy" />
+  </div>
+
+  <div class="lab-second-img">
+    <img src="../IMG/lab-2-img.png" alt="lab" loading="lazy" />
+  </div>
+
+  <!------------------------------------------------- Laboratory location cards-->
+  <section class="lab-container">
+    <div class="lab-locations">
+      <h2>Our Laboratories</h2>
+      <div class="lab-grid">
+        <div class="lab-card">
+          <h3>Galle Laboratory</h3>
+          <p><i class="bx bxs-map"></i> No 30, Wakwella Rd, Galle</p>
+          <p><i class="bx bxs-envelope"></i> labgalle@carecompass.lk</p>
+          <p><i class="bx bxs-phone"></i> 076 186 9668</p>
+        </div>
+        <div class="lab-card">
+          <h3>Ragama Laboratory</h3>
+          <p><i class="bx bxs-map"></i> 39A, Kadawatha Rd, Ragama</p>
+          <p><i class="bx bxs-envelope"></i> labri@carecompass.lk</p>
+          <p><i class="bx bxs-phone"></i> 078 369 0294</p>
+        </div>
+        <div class="lab-card">
+          <h3>Negombo Laboratory</h3>
+          <p><i class="bx bxs-map"></i> No 24b, colombo Rd, Negombo</p>
+          <p><i class="bx bxs-envelope"></i> labri@carecompass.lk</p>
+          <p><i class="bx bxs-phone"></i> 076 186 9668</p>
+        </div>
+        <div class="lab-card">
+          <h3>Kurunagala Laboratory</h3>
+          <p><i class="bx bxs-map"></i> No 12 Hilltop Crescent, Kurunegala</p>
+          <p><i class="bx bxs-envelope"></i> labri@carecompass.lk</p>
+          <p><i class="bx bxs-phone"></i> 078 369 0294</p>
+        </div>
+        <div class="lab-card">
+          <h3>Chillaw Laboratory</h3>
+          <p><i class="bx bxs-map"></i> No 91 Palm Grove, Chilaw</p>
+          <p><i class="bx bxs-envelope"></i> labri@carecompass.lk</p>
+          <p><i class="bx bxs-phone"></i> 076 186 9668</p>
+        </div>
+        <div class="lab-card">
+          <h3>Kandy Laboratory</h3>
+          <p><i class="bx bxs-map"></i> No 104 Mountain View Road, Kandy</p>
+          <p><i class="bx bxs-envelope"></i> labri@carecompass.lk</p>
+          <p><i class="bx bxs-phone"></i> 078 369 0294</p>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------------------lab appointment form-->
+    <div class="Lab-form">
+      <h1>Test Appointment</h1>
+      <form id="test-form" action="../Backend/lab_appointment.php" method="POST">
+        <input type="text" id="name" name="name" placeholder="Name" required />
+
+        <input type="email" id="email" name="email" placeholder="Email" required />
+
+        <input type="text" id="phone" name="phone" placeholder="Contact" required />
+
+        <select id="test_type" name="test_type" required>
+          <!----------------test selector-->
+          <option value="" disabled selected>Prefered Test</option>
+          <option value="Complete Blood Count">Complete Blood Count</option>
+          <option value="Hemoglobin Test">Hemoglobin Test</option>
+          <option value="Blood Sugar">Blood Sugar</option>
+          <option value="Lipid Profile">Lipid Profile</option>
+          <option value="Urine Routine Test">Urine Routine Test</option>
+          <option value="Liver Function Test">Liver Function Test</option>
+          <option value="Thyroid Function Test">Thyroid Function Test</option>
+          <option value="Pregnancy Confirmation Test">Pregnancy Confirmation Test</option>
+          <option value="Semen Analysis">Semen Analysis</option>
+        </select>
+
+        <select id="lab_branch" name="lab_branch" required>
+          <!----------------test selector-->
+          <option value="" disabled selected>select lab</option>
+          <option value="Galle">Galle</option>
+          <option value="Ragama">Ragama</option>
+          <option value="Negombo">Negombo</option>
+          <option value="Kurunagala">Kurunagala</option>
+          <option value="Chillaw">Chillaw</option>
+          <option value="Kandy">Kandy</option>
+        </select>
+
+        <input type="date" id="test_date" name="test_date" placeholder="Date" required />
+
+        <input type="time" id="test_time" name="test_time" placeholder="time" required />
+
+        <button id="submit" type="submit">Book Appointment</button>
+      </form>
+    </div>
+  </section>
+
+  <!--footer-->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="../IMG/logo.png">
+        </div>
+
+        <p>
+          Providing exceptional medical care with advanced technology and a dedicated team.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../HTML/Homepage.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="../HTML/Appointment.html">Appointment</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Location : Colombo, Sri Lanka</p>
+        <p>Phone : (+94) 076 186 9668</p>
+        <p>Email : info@carecompass.lk</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Care Compass Hospital. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
